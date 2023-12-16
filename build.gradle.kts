@@ -64,7 +64,9 @@ repositories {
 
 dependencies {
     modImplementation("com.tterrag.registrate:Registrate:${registrate_version}")
-    modImplementation("com.simibubi.create:create-${mc_version}:${create_version}:slim") { isTransitive = false }
+    modImplementation("maven.modrinth:create-fabric-dme-edition:${create_version}:slim"){ isTransitive = false }
+    modApi("io.github.fabricators_of_create.Porting-Lib:Porting-Lib:${port_lib_version}+1.20-entity-refactor")
+
     modImplementation("com.jozufozu.flywheel:flywheel-forge-${mc_version}:${flywheel_version}")
 
     if (!env.isCI) {
